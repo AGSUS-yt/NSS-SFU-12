@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NSS:SFU:12</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto+Condensed:wght@700&family=Comfortaa&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+<!-- Share for whole page -->
+<div class="global-share" onclick="sharePage()" title="Share this page">
+  &#8942;
+</div>
+
+<main class="container" role="main">
+  <section class="logo">
+    <img src="logo.png" alt="Honey Home Cakes Logo" class="logo-img" />
+  </section>
+
+  <h1 class="title">NATIONAL SERVICE SCHEME</h1>
+  <p class="subtitle1">ST.THOMAS HIGHER SECONDARY SCHOOL KOZHENCHERRY</p>
+  <p class="subtitle2">" NOT ME BUT YOU "</p>
+  <p class="subtitle3">" മനസ്സ് നന്നാവട്ടെ "</p>
+  <p class="subtitle">SFU : 12</p>
+
+  <nav class="links">
+  <a href="https://instagram.com/nss_kozhencherry" class="link-button" aria-label="Instagram">
+    <img src="instagram.png" alt="Instagram" class="link-icon" />
+    Instagram
+    <span class="share-icon" onclick="event.preventDefault(); shareLink('https://instagram.com/nss_kozhencherry')">&#8942;</span>
+  </a>
+
+  <a href="https://www.youtube.com/@NSSKOZHENCHERRY" class="link-button" aria-label="Youtube">
+    <img src="youtube.png" alt="Youtube" class="link-icon" />
+    Youtube
+    <span class="share-icon" onclick="event.preventDefault(); shareLink('https://www.youtube.com/@NSSKOZHENCHERRY')">&#8942;</span>
+  </a>
+
+  <a href="https://www.facebook.com/share/1F7dwYf7Av/" class="link-button" target="_blank" rel="noopener">
+    <img src="facebook.png" alt="Facebook" class="link-icon" />
+    Facebook
+    <span class="share-icon" onclick="event.preventDefault(); shareLink('https://www.facebook.com/share/1F7dwYf7Av/')">&#8942;</span>
+  </a>
+
+  <a href="https://maps.app.goo.gl/JaZcb8Ewpjwof7HS9" class="link-button" target="_blank" rel="noopener">
+    <img src="location.png" alt="Location" class="link-icon" />
+    Where to find us?
+    <span class="share-icon" onclick="event.preventDefault(); shareLink('https://maps.app.goo.gl/JaZcb8Ewpjwof7HS9')">&#8942;</span>
+  </a>
+</nav>
+
+  <footer tabindex="0" class="footer">
+  © NATIONAL SERVICE SCHEME : SFU : 12<br />
+  <em>NSS : SFU : 12 x 
+    <a href="https://instagram.com/anxndhu._01" target="_blank" rel="noopener" class="footer-link">AGSUS YT</a>
+  </em>
+</footer>
+
+</main>
+
+<script>
+  function shareLink(url) {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Honey Home Cakes',
+        text: 'Check this out!',
+        url: url
+      });
+    } else {
+      alert("Sharing is not supported on your device.");
+    }
+  }
+
+  function sharePage() {
+    shareLink(window.location.href);
+  }
+</script>
+
+</body>
+</html>
